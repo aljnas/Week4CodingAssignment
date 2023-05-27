@@ -27,18 +27,18 @@ public class ArraysAndMethods {
 		}
 		double average = (double) sum / ages.length;
 		System.out.println("Average age: " + average);
-	}
 	
-	{
+	
+	
 	String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
 	
 	//a
-	int sum = 0;
+	int sum1 = 0;
 	for (int i = 0; i < names.length; i++) {
-	    sum += names[i].length();
+	    sum1 += names[i].length();
 	}
-	double average = (double) sum / names.length;
-	System.out.println("Average number of letters per name: " + average);
+	double average1 = sum1 / names.length;
+	System.out.println("Average number of letters per name: " + average1);
 	
      String concatenatedNames = "";
      for (int i = 0; i < names.length; i++) {
@@ -53,15 +53,19 @@ public class ArraysAndMethods {
      int[] nameLengths = new int[names.length];
    for (int i = 0; i < names.length; i++) {
     nameLengths[i] = names[i].length();
-    int sum1 = 0;
-    for (int i1 = 0; i1 < nameLengths.length; i1++) {
-        sum1 += nameLengths[i1];
-    }
-    System.out.println("Sum of all elements in the array: " + sum1);
    }
-	}
+    int sum2 = 0;
+    for (int i1 = 0; i1 < nameLengths.length; i1++) {
+        sum2 += nameLengths[i1];
+    }
+    System.out.println("Sum of all elements in the array: " + sum2);
+    System.out.println("End");
+    System.out.println(concatenateWord("String",4));
+   }
+	
   //7
     public static String concatenateWord(String word, int n) {
+
         String result = "";
         for (int i = 0; i < n; i++) {
             result += word;
@@ -111,7 +115,7 @@ public class ArraysAndMethods {
     
     //13 I created this method because finding the maximum value in an array is a common task
     public static int findMaxValue(int[] numbers) {
-        int max = Integer.MIN_VALUE;
+        int max = Integer.MAX_VALUE;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > max) {
                 max = numbers[i];
